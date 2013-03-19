@@ -83,11 +83,6 @@
       <description>WinSCP (Windows Secure CoPy) is a free and open source SFTP, SCP, and FTP client for Microsoft Windows.</description>
       <file src="@{ARTIFACT_REPOSITORY}/softwares/winscp.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
     </pack>
-<!--     <pack name="Eclipse metadata" required="yes">
-      <description>Metadata</description>
-      <file src="@{ARTIFACT_REPOSITORY}/workspace/.metadata.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
-    </pack>
- -->
     <pack name="Spring-mvc-quickstart" required="yes">
       <description>Spring MVC quickstart project</description>
       <file src="@{ARTIFACT_REPOSITORY}/workspace/spring-mvc-quickstart-archetype-master.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
