@@ -1,0 +1,105 @@
+<installation version="5.0"
+              xmlns:izpack="http://izpack.org/schema/installation"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://izpack.org/schema/installation http://izpack.org/schema/5.0/izpack-installation-5.0.xsd">
+ 
+  <info>
+    <appname>CareerInJava</appname>
+    <appversion>0.1</appversion>
+    <appsubpath>careerinjava</appsubpath>
+    <javaversion>1.6</javaversion>
+    <run-privileged condition="izpack.windowsinstall.vista|izpack.windowsinstall.7|izpack.windowsinstall.8" />
+  </info>
+
+  <jar src="customPanel.jar"/>
+
+  <variables>
+    <variable name="TargetPanel.dir.windows" value="c:\Applications\careerinjava"/>
+    <variable name="ShowCreateDirectoryMessage" value="false"/>
+  </variables>
+
+  <natives>
+    <native type="izpack" name="ShellLink.dll"/>
+    <native type="izpack" name="ShellLink_x64.dll"/>
+  </natives>
+
+  <locale>
+    <langpack iso3="eng"/>
+  </locale>
+    
+  <resources>
+    <res src="resources/shortcutSpec.xml" id="shortcutSpec.xml"/>
+    <res src="resources/ProcessPanel.Spec.xml" id="ProcessPanel.Spec.xml"/>
+    <res id="CustomLangPack.xml_eng" src="resources/CustomLangPack.xml_eng"/>
+  </resources>
+ 
+  <guiprefs width="800" height="600" resizable="no">
+    <splash>resources/install.png</splash>
+    <laf name="substance">
+      <os family="windows" />
+      <os family="unix" />
+      <param name="variant" value="mist-silver" />
+    </laf>
+    <laf name="substance">
+      <os family="mac" />
+      <param name="variant" value="mist-aqua" />
+    </laf>
+    <modifier key="useHeadingPanel" value="yes" />
+  </guiprefs>
+ 
+
+
+  <panels>
+    <panel classname="com.careerinjava.installer.panel.CustomTargetPanel" id="targetpanel"/>
+    <panel classname="PacksPanel" id="packspanel"/>
+    <panel classname="InstallPanel" id="installpanel"/>
+    <panel classname="ProcessPanel" id="processpanel"/>
+    <panel classname="com.careerinjava.installer.panel.CustomShortcutPanel" id="shortcutpanel"/>
+    <panel classname="FinishPanel" id="finishpanel"/>
+  </panels>
+ 
+  <packs>
+    <pack name="Eclipse" required="yes">
+      <description>Eclipse Juno is a multi-language software development environment comprising a base workspace and an extensible plug-in system for customizing the environment.</description>
+      <file src="@{ARTIFACT_REPOSITORY}/softwares/eclipsejuno.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
+    </pack>
+    <pack name="Apache Tomcat" required="yes">
+      <description>Apache Tomcat is an open source web server and servlet containe.</description>
+      <file src="@{ARTIFACT_REPOSITORY}/softwares/apache-tomcat-7.0.37.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
+    </pack>
+    <pack name="Maven" required="yes">
+      <description>Maven is a build automation tool used primarily for Java projects.</description>
+      <file src="@{ARTIFACT_REPOSITORY}/softwares/apache-maven-3.0.5.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
+    </pack>
+    <pack name="JDK" required="yes">
+      <description>Java Development Kit</description>
+      <file src="@{ARTIFACT_REPOSITORY}/softwares/jdk1.6.0_41.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
+    </pack>
+    <pack name="PuTTY" required="yes">
+      <description>PuTTY is a free and open source terminal emulator application which can act as a client for the SSH, Telnet, rlogin, and raw TCP computing protocols and as a serial console client.</description>
+      <file src="@{ARTIFACT_REPOSITORY}/softwares/putty.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
+    </pack>
+    <pack name="WinSCP" required="yes">
+      <description>WinSCP (Windows Secure CoPy) is a free and open source SFTP, SCP, and FTP client for Microsoft Windows.</description>
+      <file src="@{ARTIFACT_REPOSITORY}/softwares/winscp.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
+    </pack>
+<!--     <pack name="Eclipse metadata" required="yes">
+      <description>Metadata</description>
+      <file src="@{ARTIFACT_REPOSITORY}/workspace/.metadata.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
+    </pack>
+ -->
+    <pack name="Spring-mvc-quickstart" required="yes">
+      <description>Spring MVC quickstart project</description>
+      <file src="@{ARTIFACT_REPOSITORY}/workspace/spring-mvc-quickstart-archetype-master.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
+    </pack>
+    <pack name="Servers" required="yes">
+      <description>Educational servers project</description>
+      <file src="@{ARTIFACT_REPOSITORY}/workspace/Servers.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
+    </pack>
+    <pack name="Setup" required="yes">
+      <description>Batch script to setup environment</description>
+      <file src="@{ARTIFACT_REPOSITORY}/env.bat" unpack="false" targetdir="${INSTALL_PATH}" override="true">
+      </file>
+    </pack>
+  </packs>
+</installation>

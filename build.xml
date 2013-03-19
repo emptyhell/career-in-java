@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<project default="install">
+	<property name="izpack.home" value="d:/od/izpack/distr"/>
+    <property name="ARTIFACT_REPOSITORY" value="d:\OD\Izpack\repo\"/>
+
+    <path id="build.classpath">
+        <fileset dir="${izpack.home}">
+            <include name="lib/*.jar" />
+        </fileset>
+    </path>
+
+    <property name="buildDir" location="_build"/>
+    
+    <target name="compileCustomPanel">
+        <mkdir dir="${buildDir}"/>
+        <javac srcdir="${basedir}/src" destdir="${buildDir}" debug="true" debuglevel="lines,source">
+            <classpath>
+                <fileset dir="${izpack.home}/lib">
+                    <include name="*.jar"/>
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+    
+    <target name="jarCustomPanel" depends="compileCustomPanel">
+        <jar destfile="customPanel.jar">
+            <fileset dir="${buildDir}"/>
+        </jar>
+    </target>
+
+    <taskdef name="izpack" classpathref="build.classpath" classname="com.izforge.izpack.ant.IzPackTask" />
+ 
+    <target name="install" depends="jarCustomPanel">
+        <izpack input="installer.xml"
+                output="careerinjava-install.jar"
+                installerType="standard"
+                basedir="${basedir}"
+                izPackDir="${izpack.home}" 
+                inheritAll="true"/>
+    </target>
+</project>
