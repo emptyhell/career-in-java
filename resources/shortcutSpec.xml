@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<izpack:shortcuts version="5.0"
+                  xmlns:izpack="http://izpack.org/schema/shortcuts"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://izpack.org/schema/shortcuts http://izpack.org/schema/5.0/izpack-shortcuts-5.0.xsd">
+    <skipIfNotSupported/>
+    <shortcut
+            name="CIJ MavenEnv"
+            programGroup="no"
+            desktop="yes"
+            applications="no"
+            startMenu="no"
+            startup="no"
+            target="C:\WINDOWS\system32\cmd.exe"
+            workingDirectory="C:\WINDOWS\system32\cmd.exe"
+            commandLine="/k  $INSTALL_PATH\env.bat">
+        <createForPack name="Setup"/>
+    </shortcut>       
+
+    <shortcut
+            name="CIJ WinSCP"
+            programGroup="no"
+            desktop="yes"
+            applications="no"
+            startMenu="no"
+            startup="no"
+            target="$INSTALL_PATH\softwares\winscp\WinSCP.exe"
+            workingDirectory="$INSTALL_PATH\softwares\winscp"
+            commandLine="">
+        <createForPack name="WinSCP"/>
+    </shortcut>
+
+   <shortcut
+            name="CIJ Eclipse Juno"
+            programGroup="no"
+            desktop="yes"
+            applications="no"
+            startMenu="no"
+            startup="no"
+            target="$INSTALL_PATH\softwares\eclipsejuno\eclipse.exe"
+            workingDirectory="$INSTALL_PATH\softwares\eclipsejuno"
+            commandLine="">
+        <createForPack name="Eclipse"/>
+    </shortcut>
+
+    <shortcut
+            name="CIJ putty"
+            programGroup="no"
+            desktop="yes"
+            applications="no"
+            startMenu="no"
+            startup="no"
+            target="$INSTALL_PATH\softwares\putty\putty.exe"
+            workingDirectory="$INSTALL_PATH\softwares\putty"
+            commandLine="">
+        <createForPack name="PuTTY"/>
+    </shortcut>
+
+
+</izpack:shortcuts>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   

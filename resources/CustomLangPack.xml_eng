@@ -1,0 +1,10 @@
+<izpack:langpack version="5.0"
+                 xmlns:izpack="http://izpack.org/schema/langpack"
+                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="http://izpack.org/schema/langpack http://izpack.org/schema/5.0/izpack-langpack-5.0.xsd">
+    <str id="CustomShortcutPanel.headline" txt="Install Application Shortcuts"/>
+	<str id="CustomShortcutPanel.shortcuts" txt="The list of the targets for which shortcuts will be created in the installation directory"/>
+	<str id="CustomTargetPanel.warning" txt="Do you want to continue installation to the non-default directory?"/>
+	<str id="CustomTargetPanel.warningtitle" txt="Non-default installation folder"/>
+        
+</izpack:langpack>
