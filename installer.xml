@@ -50,6 +50,16 @@
     <modifier key="useHeadingPanel" value="yes" />
   </guiprefs>
  
+ <conditions>
+    <condition type="variable" id="isdefaultdirwindows">
+      <name>TargetPanel.dir.windows</name>
+      <value>${INSTALL_PATH}</value>
+    </condition>
+    <condition type="variable" id="isdefaultdirmac">
+      <name>TargetPanel.dir.mac</name>
+      <value>${INSTALL_PATH}</value>
+    </condition>
+ </conditions>
 
 
   <panels>
