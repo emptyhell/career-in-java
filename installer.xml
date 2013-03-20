@@ -15,6 +15,9 @@
 
   <variables>
     <variable name="TargetPanel.dir.windows" value="c:\Applications\careerinjava"/>
+    <variable name="TargetPanel.dir.mac" value="/Applications/careerinjava"/>
+    <variable name="TargetPanel.dir.mac_osx" value="/Applications/careerinjava"/>
+    <variable name="TargetPanel.dir.unix" value="/Applications/careerinjava"/>
     <variable name="ShowCreateDirectoryMessage" value="false"/>
   </variables>
 
@@ -73,15 +76,22 @@
     </pack>
     <pack name="JDK" required="yes">
       <description>Java Development Kit</description>
-      <file src="@{ARTIFACT_REPOSITORY}/softwares/jdk1.6.0_41.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
+      <file src="@{ARTIFACT_REPOSITORY}/softwares/jdk1.6.0_41.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true">
+        <os family="windows"/>
+      </file>
+      <file src="@{ARTIFACT_REPOSITORY}/softwares/jdk1.6.0_41_Mac.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true">
+        <os family="mac"/>
+      </file>
     </pack>
     <pack name="PuTTY" required="yes">
       <description>PuTTY is a free and open source terminal emulator application which can act as a client for the SSH, Telnet, rlogin, and raw TCP computing protocols and as a serial console client.</description>
       <file src="@{ARTIFACT_REPOSITORY}/softwares/putty.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
+      <os family="windows"/>
     </pack>
     <pack name="WinSCP" required="yes">
       <description>WinSCP (Windows Secure CoPy) is a free and open source SFTP, SCP, and FTP client for Microsoft Windows.</description>
       <file src="@{ARTIFACT_REPOSITORY}/softwares/winscp.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
+      <os family="windows"/>
     </pack>
     <pack name="SQuirrel SQL" required="yes">
       <description>SQuirreL SQL is an open-source Java SQL Client program for any JDBC compliant database</description>
@@ -95,9 +105,13 @@
       <description>Educational servers project</description>
       <file src="@{ARTIFACT_REPOSITORY}/workspace/Servers.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
     </pack>
-    <pack name="Setup" required="yes">
+    <pack name="Setup script" required="yes">
       <description>Batch script to setup environment</description>
       <file src="@{ARTIFACT_REPOSITORY}/env.bat" unpack="false" targetdir="${INSTALL_PATH}" override="true">
+        <os family="windows"/>
+      </file>
+      <file src="@{ARTIFACT_REPOSITORY}/env.sh" unpack="false" targetdir="${INSTALL_PATH}" override="true">
+        <os family="mac|unix"/>
       </file>
     </pack>
   </packs>

@@ -14,7 +14,7 @@
             target="C:\WINDOWS\system32\cmd.exe"
             workingDirectory="C:\WINDOWS\system32\cmd.exe"
             commandLine="/k  $INSTALL_PATH\env.bat">
-        <createForPack name="Setup"/>
+        <createForPack name="Setup script"/>
     </shortcut>       
 
     <shortcut

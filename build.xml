@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <project default="install">
 	<property name="izpack.home" value="d:/od/izpack/distr"/>
-    <property name="ARTIFACT_REPOSITORY" value="d:/OD/Izpack/repo"/>
+    <property name="ARTIFACT_REPOSITORY" value="d:/OD/Izpack/fakerepo"/>
 
     <path id="build.classpath">
         <fileset dir="${izpack.home}">

@@ -1,6 +1,6 @@
 <processing>
- <job name="Fix batch">
-  <executeForPack name="Setup"/>
+ <job name="Create setup script on windows">
+  <executeForPack name="Setup script"/>
   <os family="windows" />
 	<executeclass name="com.careerinjava.installer.action.SetupFix">
 		<arg>${INSTALL_PATH}\env.bat</arg>
@@ -15,6 +15,24 @@ set PATH=%PATH%;%JAVA_HOME%\bin;%MAVEN_HOME%\bin;%CATALINA_HOME%\bin
 
 @echo on
 cd %BASE_PATH%\workspace
+
+mvn -version</arg>
+	</executeclass>
+ </job>
+ <job name="Create setup script on macos">
+  <executeForPack name="Setup script"/>
+  <os family="windows" />
+	<executeclass name="com.careerinjava.installer.action.SetupFix">
+		<arg>${INSTALL_PATH}\env.sh</arg>
+		<arg>#!/bin/sh
+export BASE_PATH=${INSTALL_PATH}
+export JAVA_HOME=$BASE_PATH/softwares/jdk1.6.0_41
+export MAVEN_HOME=$BASE_PATH/softwares/apache-maven-3.0.5
+export CATALINA_HOME=$BASE_PATH/softwares/apache-tomcat-7.0.37
+export MAVEN_OPTS = -Xms256m -Xmx512m -XX:MaxPermSize=128m
+
+export PATH=$PATH:$JAVA_HOME/bin:$MAVEN_HOME/bin:$CATALINA_HOME/bin
+cd $BASE_PATH/workspace
 
 mvn -version</arg>
 	</executeclass>
