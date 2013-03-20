@@ -9,7 +9,7 @@
 	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-compiler-5.0.0-beta11.jar"/>
 	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-core-5.0.0-beta11.jar" sourcepath="C:/Users/Oleksandr_Klymchuk/.m2/repository/org/codehaus/izpack/izpack-core/5.0.0-beta11/izpack-core-5.0.0-beta11-sources.jar"/>
 	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-event-5.0.0-beta11.jar"/>
-	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-gui-5.0.0-beta11.jar"/>
+	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-gui-5.0.0-beta11.jar" sourcepath="C:/Users/Oleksandr_Klymchuk/.m2/repository/org/codehaus/izpack/izpack-gui/5.0.0-beta11/izpack-gui-5.0.0-beta11-sources.jar"/>
 	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-installer-5.0.0-beta11.jar" sourcepath="D:/OD/Izpack/src/izpack-izpack-5.0.0-beta11"/>
 	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-listener-5.0.0-beta11.jar"/>
 	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-native-5.0.0-beta11.jar"/>

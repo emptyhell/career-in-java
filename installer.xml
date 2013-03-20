@@ -107,6 +107,10 @@
       <description>SQuirreL SQL is an open-source Java SQL Client program for any JDBC compliant database</description>
       <file src="@{ARTIFACT_REPOSITORY}/softwares/squirrel.zip" unpack="true" targetdir="${INSTALL_PATH}/softwares" override="true"/>
     </pack>
+    <pack name="Metadata" required="yes">
+      <description>Eclipse metadata</description>
+      <file src="@{ARTIFACT_REPOSITORY}/workspace/metadata.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
+    </pack>
     <pack name="Spring-mvc-quickstart" required="yes">
       <description>Spring MVC quickstart project</description>
       <file src="@{ARTIFACT_REPOSITORY}/workspace/spring-mvc-quickstart-archetype-master.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
