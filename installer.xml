@@ -11,7 +11,8 @@
     <run-privileged condition="izpack.windowsinstall.vista|izpack.windowsinstall.7|izpack.windowsinstall.8" />
   </info>
 
-  <jar src="customPanel.jar"/>
+  <jar src="lib/customPanel.jar"/>
+  <jar src="lib/commons-io-2.4.jar"/>
 
   <variables>
     <variable name="TargetPanel.dir.windows" value="c:\Applications\careerinjava"/>
@@ -109,7 +110,7 @@
     </pack>
     <pack name="Metadata" required="yes">
       <description>Eclipse metadata</description>
-      <file src="@{ARTIFACT_REPOSITORY}/workspace/metadata.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
+      <file src="@{ARTIFACT_REPOSITORY}/workspace/.metadata.zip" unpack="true" targetdir="${INSTALL_PATH}/workspace" override="true"/>
     </pack>
     <pack name="Spring-mvc-quickstart" required="yes">
       <description>Spring MVC quickstart project</description>

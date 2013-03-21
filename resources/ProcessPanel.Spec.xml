@@ -19,6 +19,15 @@ cd %BASE_PATH%\workspace
 mvn -version</arg>
 	</executeclass>
  </job>
+
+ <job name="Update ini file">
+  <executeForPack name="Eclipse"/>
+  <os family="windows" />
+	<executeclass name="com.careerinjava.installer.action.WindowsEclipseIniUpdater">
+		<arg>${INSTALL_PATH}</arg>
+	</executeclass>
+ </job>
+
  <job name="Create setup script on macos" condition="!isdefaultdirmac">
   <executeForPack name="Setup script"/>
   <os family="mac" />
@@ -37,4 +46,13 @@ cd $BASE_PATH/workspace
 mvn -version</arg>
 	</executeclass>
  </job>
+
+  <job name="Update ini file">
+  <executeForPack name="Eclipse"/>
+  <os family="mac" />
+	<executeclass name="com.careerinjava.installer.action.MacEclipseIniUpdater">
+		<arg>${INSTALL_PATH}</arg>
+	</executeclass>
+ </job>
+
 </processing>

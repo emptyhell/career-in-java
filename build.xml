@@ -23,7 +23,7 @@
     </target>
     
     <target name="jarCustomPanel" depends="compileCustomPanel">
-        <jar destfile="customPanel.jar">
+        <jar destfile="lib/customPanel.jar">
             <fileset dir="${buildDir}"/>
         </jar>
     </target>

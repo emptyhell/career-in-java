@@ -15,5 +15,6 @@
 	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-native-5.0.0-beta11.jar"/>
 	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-tools-5.0.0-beta11.jar"/>
 	<classpathentry kind="lib" path="D:/OD/Izpack/distr/lib/izpack-uninstaller-5.0.0-beta11.jar"/>
+	<classpathentry kind="lib" path="lib/commons-io-2.4.jar" sourcepath="C:/Users/Oleksandr_Klymchuk/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
